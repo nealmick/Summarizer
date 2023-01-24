@@ -2,4 +2,4 @@
 ChatGPT Summarizer
 
 
-<img src="https://i.imgur.com/Lj0yFJS.png" width="600" height="300" />
+<img src="https://i.imgur.com/Lj0yFJS.png" width="300" height="600" />
