@@ -4,4 +4,4 @@ The project, built using OpenAI's Daveneti text model, analyzes input text and s
 
 # https://squashbug.xyz/test
 
-<img src="https://i.imgur.com/Lj0yFJS.png" width="450" height="600" />
+<img src="https://i.imgur.com/Lj0yFJS.png" width="400" height="500" />
