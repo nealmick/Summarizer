@@ -1,0 +1,48 @@
+
+{% extends "gpt/base.html"%}
+
+{% load static %}
+
+
+{% block content %}
+<div style="width: 100%;height: 60%;">
+<center>
+<h1 style="margin-top: 100px;">
+    Summarizer
+</h1>
+</center>
+
+<div class="col-md-6" style="margin-top:25px;margin-left:auto;margin-right:auto">
+<textarea class=""placeholder="Input Text" style="width:100%;margin-top:5px;height:150px;border-radius: 5px;"name="text" rows="10" maxlength="5000" class="textarea" id="input-text"></textarea>
+</div>
+<center>
+<div class="slidecontainer"style="white-space: nowrap;">
+    <p style="display: inline;">Response Length: </p><p style="display: inline;"id="length-slide">140</p>
+    <br>
+    <input style="width:300px;"type="range" min="50" max="500" value="140" class="slider" id="myRange">
+</div>
+<a onClick="getResponse();"style="margin-top:10px;"class="btn btn-outline-primary">Submit</a>
+<div class="wavee"id="loadingIcon"style="margin-top:25px;margin-left:auto;margin-right:auto">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+</div>
+</center>
+</div>
+
+
+<div class="col-md-6" style="margin-left:auto;margin-right:auto">
+    <center>
+    <p id="output"></p>
+    </center>
+</div>
+
+
+{% endblock content%}
