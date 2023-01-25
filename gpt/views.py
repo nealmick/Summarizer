@@ -19,19 +19,22 @@ def getResponse(request):
     url = url.split('?length=')[1]
     length = url.split('&text=')[0]
     text = url.split('&text=')[1]
+    text = text.split('&temperature=')[0]
+    temperature = url.split('&temperature=')[1]
     print(length,text)
     key = ''
     ai.api_key = key
+    text = text.replace('''%0A''',"")
     
     prompt = "summarize this in less then "+length+" characters: "+text
     prompt = urllib.parse.unquote(prompt)
     print(prompt)
-    r = generate_gpt3_response(prompt)
+    r = generate_gpt3_response(prompt,int(temperature)/10)
     print(r)
     return JsonResponse({'r': r})
 
 
-def generate_gpt3_response(user_text, print_output=False):
+def generate_gpt3_response(user_text, temperature,print_output=False):
     """
     Query OpenAI GPT-3 for the specific key and get back a response
     :type user_text: str the user's text to query for
@@ -39,7 +42,7 @@ def generate_gpt3_response(user_text, print_output=False):
     """
     completions = ai.Completion.create(
         engine='text-davinci-003',  # Determines the quality, speed, and cost.
-        temperature=0.5,            # Level of creativity in the response
+        temperature=float(temperature),            # Level of creativity in the response
         prompt=user_text,           # What the user typed in
         max_tokens=100,             # Maximum tokens in the prompt AND response
         n=1,                        # The number of completions to generate

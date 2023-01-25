@@ -20,6 +20,10 @@
     <p style="display: inline;">Response Length: </p><p style="display: inline;"id="length-slide">140</p>
     <br>
     <input style="width:300px;"type="range" min="50" max="500" value="140" class="slider" id="myRange">
+    <br>
+    <p style="display: inline;">creativity: </p><p style="display: inline;"id="temp-slide">5</p>
+    <br>
+    <input style="width:300px;"type="range" min="0" max="10" value="5" class="slider" id="tempRange">
 </div>
 <a onClick="getResponse();"style="margin-top:10px;"class="btn btn-outline-primary">Submit</a>
 <div class="wavee"id="loadingIcon"style="margin-top:25px;margin-left:auto;margin-right:auto">
@@ -44,5 +48,7 @@
     </center>
 </div>
 
-
+<div style="position:absolute;right: 25px;bottom: 25px;">
+	<a class="text-muted" href="https://github.com/nealmick/Summarizer"  target="_blank">GitHub <i class="fab fa-github"></i></a>
+</div>
 {% endblock content%}
