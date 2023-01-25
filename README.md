@@ -20,5 +20,6 @@ pip install -r requirements.txt
 python3 manage.py runserver
 
 #note: you must supply your own API key by going to openai.com
+#gpt/views.py line:25 key = ""
 
 ```
