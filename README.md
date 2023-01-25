@@ -4,7 +4,7 @@ The project, built using OpenAI's Davinci text model, analyzes input text and su
 
 # https://squashbug.xyz/test
 
-<img src="https://i.imgur.com/Lj0yFJS.png" width="500" height="550" />
+<img src="https://i.imgur.com/Lj0yFJS.png" width="500" height="500" />
 
 ```
 #This is the current prompt
