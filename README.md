@@ -8,10 +8,6 @@ The project, built using OpenAI's Davinci text model, analyzes input text and su
 
 ```
 
-#This is the current prompt
-
-prompt = "Summarize this in less then "+str(int(int(length)/7))+" words: "+text
-
 #install:
 
 git clone https://github.com/nealmick/Summarizer
