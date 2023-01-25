@@ -7,9 +7,13 @@ The project, built using OpenAI's Davinci text model, analyzes input text and su
 <img src="https://i.imgur.com/Lj0yFJS.png" width="500" height="500" />
 
 ```
+
 #This is the current prompt
+
 prompt = "Summarize this in less then "+str(int(int(length)/7))+" words: "+text
+
 #install:
+
 git clone https://github.com/nealmick/Summarizer
 cd Summarizer
 pip install -r requirements.txt
